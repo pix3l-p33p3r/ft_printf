@@ -29,7 +29,6 @@ int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_putnbr_base_16(unsigned long nb, char *base);
 int	ft_putnbr(long n);
-int	ft_formatter(va_list ap, char c, int *i);
 int	ft_printf(const char *str, ...);
 
 #endif
