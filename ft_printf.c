@@ -3,40 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: pixel_peeper <pixel_peeper@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:04:44 by elel-yak          #+#    #+#             */
-/*   Updated: 2022/11/02 18:20:11 by elel-yak         ###   ########.fr       */
+/*   Updated: 2022/11/03 22:16:47 by pixel_peepe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_fucker(va_list ap, char c, int *i)
+int	ft_printf_fucker(va_list q, char c, int *i)
 {
-	int	count;
+	int	cnt;
 
-	count = 0;
+	cnt = 0;
 	if (c == 'c')
-		count += ft_putchar(va_arg(ap, int));
+		cnt += ft_putchar(va_arg(q, int));
 	else if (c == 's')
-		count += ft_putstr(va_arg(ap, char *));
+		cnt += ft_putstr(va_arg(q, char *));
 	else if (c == 'X')
-		count += ft_putnbr_base_16(va_arg(ap, unsigned int), HEX_UPPER);
+		cnt += ft_putnbr_base_16(va_arg(q, unsigned int), HEX_UPPER);
 	else if (c == 'x')
-		count += ft_putnbr_base_16(va_arg(ap, unsigned int), HEX_LOWER);
+		cnt += ft_putnbr_base_16(va_arg(q, unsigned int), HEX_LOWER);
 	else if (c == 'p')
-		count += ft_putstr("0x") + ft_putnbr_base_16(va_arg(ap, unsigned long),
+		cnt += ft_putstr("0x") + ft_putnbr_base_16(va_arg(q, unsigned long),
 				HEX_LOWER);
 	else if (c == 'u')
-		count += ft_putnbr(va_arg(ap, unsigned int));
+		cnt += ft_putnbr(va_arg(q, unsigned int));
 	else if (c == 'd' || c == 'i')
-		count += ft_putnbr(va_arg(ap, int));
+		cnt += ft_putnbr(va_arg(q, int));
 	else if (c == '%')
-		count += ft_putchar('%');
+		cnt += ft_putchar('%');
 	else
 		(*i)--;
-	return (count);
+	return (cnt);
 }
 int	ft_printf(const char *x, ...)
 {
@@ -57,7 +57,7 @@ int	ft_printf(const char *x, ...)
 			nb += ft_printf_fucker(z, x[y], &y);
 		}
 		else
-			nb += ft_putchar(x[i]);
+			nb += ft_putchar(x[y]);
 	}
 	va_end(z);
 	return (nb);

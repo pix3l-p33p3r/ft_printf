@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: pixel_peeper <pixel_peeper@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:05:57 by elel-yak          #+#    #+#             */
-/*   Updated: 2022/11/02 18:21:29 by elel-yak         ###   ########.fr       */
+/*   Updated: 2022/11/03 22:16:42 by pixel_peepe      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_putnbr_base_16(unsigned long nb, char *base);
 int	ft_putnbr(long n);
-int	ft_formatter(va_list ap, char c, int *i);
+int	ft_printf_fucker(va_list ap, char c, int *i);
 int	ft_printf(const char *fmt, ...);
 
 #endif
