@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pixel_peeper <pixel_peeper@student.42.f    +#+  +:+       +#+        */
+/*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:04:44 by elel-yak          #+#    #+#             */
-/*   Updated: 2022/11/03 22:16:47 by pixel_peepe      ###   ########.fr       */
+/*   Updated: 2022/11/03 22:32:40 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	ft_printf_fucker(va_list q, char c, int *i)
 		(*i)--;
 	return (cnt);
 }
+
 int	ft_printf(const char *x, ...)
 {
 	va_list	z;
