@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:22:49 by elel-yak          #+#    #+#             */
-/*   Updated: 2022/11/03 22:33:27 by elel-yak         ###   ########.fr       */
+/*   Updated: 2022/11/04 10:53:20 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ int	ft_putstr(char *str)
 	return (count);
 }
 
-int	ft_putnbr_base_16(unsigned long nb, char *base)
+int	ft_putnbr_base(unsigned long nb, char *base)
 {
 	int	count;
 
 	count = 0;
 	if (nb >= 16)
-		count += ft_putnbr_base_16(nb / 16, base);
+		count += ft_putnbr_base(nb / 16, base);
 	count += ft_putchar(base[nb % 16]);
 	return (count);
 }

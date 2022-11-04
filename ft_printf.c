@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:04:44 by elel-yak          #+#    #+#             */
-/*   Updated: 2022/11/03 22:32:40 by elel-yak         ###   ########.fr       */
+/*   Updated: 2022/11/04 10:53:43 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	ft_printf_fucker(va_list q, char c, int *i)
 	else if (c == 's')
 		cnt += ft_putstr(va_arg(q, char *));
 	else if (c == 'X')
-		cnt += ft_putnbr_base_16(va_arg(q, unsigned int), HEX_UPPER);
+		cnt += ft_putnbr_base(va_arg(q, unsigned int), HEX_UPPER);
 	else if (c == 'x')
-		cnt += ft_putnbr_base_16(va_arg(q, unsigned int), HEX_LOWER);
+		cnt += ft_putnbr_base(va_arg(q, unsigned int), HEX_LOWER);
 	else if (c == 'p')
-		cnt += ft_putstr("0x") + ft_putnbr_base_16(va_arg(q, unsigned long),
+		cnt += ft_putstr("0x") + ft_putnbr_base(va_arg(q, unsigned long),
 				HEX_LOWER);
 	else if (c == 'u')
 		cnt += ft_putnbr(va_arg(q, unsigned int));
