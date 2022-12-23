@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:22:49 by elel-yak          #+#    #+#             */
-/*   Updated: 2022/11/04 10:53:20 by elel-yak         ###   ########.fr       */
+/*   Updated: 2022/12/23 20:34:38 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,17 @@ int	ft_putnbr(long n)
 	if (n > 9)
 		count += ft_putnbr(n / 10);
 	count += ft_putchar((n % 10) + 48);
+	return (count);
+}
+
+size_t	ft_strlen(char *str)
+{
+	int	count;
+
+	count = 0;
+	if (!str)
+		return (0);
+	while (str[count])
+		count++;
 	return (count);
 }

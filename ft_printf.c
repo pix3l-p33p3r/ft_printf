@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:04:44 by elel-yak          #+#    #+#             */
-/*   Updated: 2022/11/04 10:53:43 by elel-yak         ###   ########.fr       */
+/*   Updated: 2022/12/23 20:38:37 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,9 @@ int	ft_printf(const char *x, ...)
 	}
 	va_end(z);
 	return (nb);
+}
+
+int main()
+{
+	printf("%s" , "");
 }

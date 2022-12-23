@@ -6,7 +6,7 @@
 /*   By: elel-yak <elel-yak@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:05:57 by elel-yak          #+#    #+#             */
-/*   Updated: 2022/11/04 10:53:10 by elel-yak         ###   ########.fr       */
+/*   Updated: 2022/12/23 20:35:01 by elel-yak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int	ft_putnbr_base(unsigned long nb, char *base);
 int	ft_putnbr(long n);
 int	ft_printf_fucker(va_list q, char c, int *i);
 int	ft_printf(const char *fmt, ...);
+size_t	ft_strlen(char *str);
 
 #endif
